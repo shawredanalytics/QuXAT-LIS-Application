@@ -1,3 +1,4 @@
+import streamlit as st
 from datetime import datetime
 
 class LISApp:
@@ -1331,3 +1332,8 @@ class LISApp:
         existing_codes = [panel['test_code'] for panel in st.session_state.test_panels]
         if new_panel['test_code'] not in existing_codes:
             st.session_state.test_panels.append(new_panel)
+
+# Main execution
+if __name__ == "__main__":
+    app = LISApp()
+    app.main()
